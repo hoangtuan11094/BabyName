@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.hoangtuan.moduletabhostpagesviews.MainActivity">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tBar"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/spinYear"
+                android:background="@color/boy"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"></Spinner>
+            <ImageView
+                android:id="@+id/imgTBar"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_location"
+                android:layout_width="32dp"
+                android:layout_height="32dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <FrameLayout
+        android:orientation="vertical"
+        android:id="@+id/fragMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>
+    <android.support.design.widget.NavigationView
+
+        android:id="@+id/design_navigation_view"
+        android:layout_gravity="left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+      >
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginLeft="10dp"
+            android:scrollbars="vertical"
+            android:id="@+id/recyNavi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
